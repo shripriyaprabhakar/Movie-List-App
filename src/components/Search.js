@@ -7,11 +7,17 @@ var Search = (props) => (
  	<button onClick={props.onClick} className="btn hidden-sm-down" >
  		<span className="glyphicon glyphicon-search"> Go </span>
     </button>
-    <input className="form-control" type="text" placeholder="add movie title"/>
- 	<button className="btn hidden-sm-down">
- 		<span className="glyphicon glyphicon-search"> ADD </span>
-    </button>
+    
  </div>
 );
 
 export default Search;
+
+/*
+<input className="form-control" type="text" placeholder="add movie title"/>
+ 	<button className="btn hidden-sm-down">
+ 		<span className="glyphicon glyphicon-search"> ADD </span>
+    </button>
+
+
+*/

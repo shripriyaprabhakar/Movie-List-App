@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import MovieList from "./MovieList";
 import MovieListEntry from "./MovieListEntry";
 import Search from "./Search";
+import AddMovie from "./AddMovie";
 import moviedata from "../data/moviedata";
 
 class App extends React.Component {
@@ -54,6 +55,12 @@ class App extends React.Component {
   //       currentMovie: event.target.value
   //   });
   // }
+  handleAddMovie(movie) {
+   console.log('here', movie);
+   let movieNew = this.state.movies;
+   movieNew.push(movie);
+   this.setState({movies : movieNew});
+  }
 
   render() {
     return (
@@ -62,11 +69,13 @@ class App extends React.Component {
           <nav className="navbar">
             <div className="col-md-6 offset-md-3">
               <Search onChange={this.handleChange} onClick={this.handleClick}/>
+              <AddMovie AddMovie={this.handleAddMovie.bind(this)}/>
             </div>
           </nav>
         <div> 
           <MovieList movies={this.state.filteredMovies} onClick={this.handleClick} 
           />
+          
         </div>
       </div>
     

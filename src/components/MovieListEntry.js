@@ -22,9 +22,9 @@ class MovieListEntry extends React.Component {
   render () {
   	return (
       <div>
- 	    <li onClick={() => this.props.movieListClick(this.props.movie)}> {this.props.movie}
- 	      <button onClick={this.update}>{this.state.val}</button>
- 	    </li> 
+ 	    <li onClick={() => this.props.MovieListClick(this.props.movie)}> {this.props.movie}</li> 
+ 	      <button className='btn' onClick={this.update}>{this.state.val}</button>
+ 	    
    	  </div>
   	);
   }

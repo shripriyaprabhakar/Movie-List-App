@@ -5,6 +5,7 @@ import MovieListEntry from "./MovieListEntry";
 import Search from "./Search";
 import AddMovie from "./AddMovie";
 import moviedata from "../data/moviedata";
+import './../styles/app.css';
 
 class App extends React.Component {
 
@@ -15,6 +16,7 @@ class App extends React.Component {
       movies: moviedata,
       query: '',
       filteredMovies: moviedata,
+      
     }
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
@@ -61,6 +63,8 @@ class App extends React.Component {
    movieNew.push(movie);
    this.setState({movies : movieNew});
   }
+
+
 
   render() {
     return (

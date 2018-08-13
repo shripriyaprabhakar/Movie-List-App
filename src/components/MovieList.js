@@ -5,8 +5,10 @@ import Search from "./Search";
 
 
 
-var MovieList = (props) => (
+const MovieList = (props) => (
 	<div>
+	<button>Watched</button>
+	<button>to watch</button>
 		{props.movies.map ( (movie,index) =>
 		   <MovieListEntry movie = {movie.title} key = {index}
 		   MovieListClick = {props.onClick}
